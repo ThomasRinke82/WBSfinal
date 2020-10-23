@@ -1,8 +1,13 @@
 import React from "react";
 import Styles from "./ThemesStyle.css";
+import EditDisplay from "../EditDisplay";
 
 function Preview() {
-  return <div className="Themes">Preview Theme</div>;
+  return (
+    <div className="PreviewTheme">
+      <EditDisplay />
+    </div>
+  );
 }
 
 export default Preview;

@@ -1,0 +1,8 @@
+.EditNavbar {
+  background-color: lightgreen;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
