@@ -1,20 +1,18 @@
 import React from "react";
-import Styles from "./ThemesStyle.css";
+import Styles from "./DesignsStyle.css";
 import UploadForms from "../UploadForms";
 import ImageGenerator from "../ImageGenerator";
 import UploadImage from "../UploadImage";
 import EditDisplay from "../EditDisplay";
-import EditNavbar from "../EditNavbar";
 
-function Result() {
+function Layout() {
   return (
-    <div className="ThemesResult">
+    <div className="DesignsLayout">
       <EditDisplay />
-      <EditNavbar />
       <UploadImage />
       <ImageGenerator />
     </div>
   );
 }
 
-export default Result;
+export default Layout;

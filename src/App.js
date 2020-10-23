@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import Themes from "./components/Themes";
+import Designs from "./components/Designs";
 import UserSelection from "./components/UserSelection";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/themes">Pick a theme</Link>
+              <Link to="/designs">Create Awesome Designs</Link>
             </li>
             <li>
               <Link to="/user_selection">My Selection</Link>
@@ -31,8 +31,8 @@ function App() {
             <Route path="/user_selection">
               <UserSelection />
             </Route>
-            <Route path="/themes">
-              <Themes />
+            <Route path="/designs">
+              <Designs />
             </Route>
             <Route path="/">
               <Home />
