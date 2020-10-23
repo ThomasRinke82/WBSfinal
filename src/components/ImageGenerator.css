@@ -20,4 +20,18 @@
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0.8;
+}
+
+.choiceArea {
+  background-color: rgb(202, 216, 221, 0.3);
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+img:hover {
+  opacity: 1;
 }
