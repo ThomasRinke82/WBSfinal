@@ -1,15 +1,24 @@
 import React from "react";
+import { connect } from "react-redux";
 import Styles from "./EditDisplay.css";
 
-function EditDisplay() {
+const EditDisplay = ({ bgData }) => {
   return (
     <div className="EditDisplay">
-      <button>Save</button>
-      <button>Share</button>
-      <button>Delete</button>
-      <h1>Edit Display</h1>
+      <div className="EditDisplayButtons">
+        <button>Save</button>
+        <button>Share</button>
+        <button>Delete</button>
+      </div>
+      <img src={bgData} style={{ height: 300 }} />
     </div>
   );
-}
+};
 
-export default EditDisplay;
+const mapStateToProps = (state) => {
+  return {
+    bgData: state.backgroundImageData,
+  };
+};
+
+export default connect(mapStateToProps)(EditDisplay);

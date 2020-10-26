@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import { setBackgroundImg } from "./Redux/Actions";
 import Styles from "./ImageGenerator.css";
 import axios from "axios";
 
-function ImageGenerator() {
+const ImageGenerator = ({ dispatch }) => {
   const [images, setImages] = useState();
-  const [choice, setChoice] = useState();
 
   // fetch the unsplash API
   // get 10 images for the search term "soccer"
@@ -22,7 +23,7 @@ function ImageGenerator() {
 
   // display a single image above the grid after clicking on it
   const clickHandler = (e) => {
-    setChoice(e.target.src);
+    dispatch(setBackgroundImg(e.target.src));
   };
 
   return (
@@ -38,15 +39,12 @@ function ImageGenerator() {
         <option value="tennis">Tennis</option>
       </select>
 
-      <div className={choice ? "choiceArea" : "hidden"}>
-        <img src={choice} />
-      </div>
       <div className="ImageGenerator">
         {images
           ? images.map((image) => (
               <div key={image.id} className="img-wrap">
                 <img
-                  src={image.urls.thumb}
+                  src={image.urls.small}
                   alt={image.alt_description}
                   onClick={clickHandler}
                 />
@@ -58,6 +56,6 @@ function ImageGenerator() {
       </div>
     </div>
   );
-}
+};
 
-export default ImageGenerator;
+export default connect()(ImageGenerator);

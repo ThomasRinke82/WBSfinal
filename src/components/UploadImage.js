@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { connect } from "react-redux";
+import { setBackgroundImg } from "./Redux/Actions";
 
-const UploadImage = () => {
-  const [file, setFile] = useState();
-
+const UploadImage = ({ dispatch }) => {
   const handleChange = (e) => {
-    setFile(URL.createObjectURL(e.target.files[0]));
+    dispatch(setBackgroundImg(URL.createObjectURL(e.target.files[0])));
   };
 
   return (
@@ -13,13 +13,10 @@ const UploadImage = () => {
         type="file"
         name="file"
         onChange={handleChange}
-        accept=".png,.jpeg"
+        accept=".png,.jpeg, .jpg"
       ></input>
-      <div>
-        <img src={file} alt="" style={{ height: 100 }} />
-      </div>
     </div>
   );
 };
 
-export default UploadImage;
+export default connect()(UploadImage);

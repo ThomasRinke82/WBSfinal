@@ -7,3 +7,12 @@
   align-items: center;
   height: 600px;
 }
+
+.TemplateCollection {
+  background-color: lightgreen;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
