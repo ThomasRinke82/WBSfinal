@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Styles from "./EditDisplay.css";
 
-const EditDisplay = ({ bgData }) => {
+const EditDisplay = ({ bgData, themeData }) => {
   return (
     <div className="EditDisplay">
       <div className="EditDisplayButtons">
@@ -11,6 +11,7 @@ const EditDisplay = ({ bgData }) => {
         <button>Delete</button>
       </div>
       <img src={bgData} style={{ height: 300 }} />
+      <img src={themeData} style={{ height: 300 }} />
     </div>
   );
 };
@@ -18,6 +19,7 @@ const EditDisplay = ({ bgData }) => {
 const mapStateToProps = (state) => {
   return {
     bgData: state.backgroundImageData,
+    themeData: state.templateData,
   };
 };
 

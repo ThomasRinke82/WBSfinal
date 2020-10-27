@@ -16,3 +16,24 @@
   justify-content: center;
   align-items: center;
 }
+
+.ContentForm {
+  background-color: lightgreen;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-wrap {
+  background-color: lightblue;
+}
+
+.team-wrap {
+  background-color: lightseagreen;
+}
+
+.result-wrap {
+  background-color: lightcoral;
+}

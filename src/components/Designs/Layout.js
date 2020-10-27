@@ -1,11 +1,13 @@
 import React from "react";
 import Styles from "./DesignsStyle.css";
 import EditDisplay from "../EditDisplay";
+import TemplateGrid from "../TemplateGrid";
 
 function Layout() {
   return (
     <div className="BackgroundDesign">
       <EditDisplay />
+      <TemplateGrid />
       <div className="TemplateCollection">
         <h4>Selection of templates coming from backend database</h4>
         <select name="templates" id="templates">

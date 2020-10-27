@@ -8,7 +8,7 @@ const useFirestore = (collection) => {
     // update listener that update the grid when a new image is uploaded
     const unsub = projectFirestore
       .collection(collection)
-      .orderBy("createdAt", "desc")
+      //.orderBy("createdAt", "desc")
       .onSnapshot((snap) => {
         let documents = [];
         snap.forEach((doc) => {
