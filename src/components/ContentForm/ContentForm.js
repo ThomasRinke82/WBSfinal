@@ -1,9 +1,9 @@
 import React from "react";
-import "./DesignsStyle.css";
+import "./ContentForm.css";
 import { setTeamName, setScore } from "../Redux/Actions";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
-import ChooseClubIcon from "./ChooseClubIcon";
+import ChooseClubIcon from "../ChooseClubIcon/ChooseClubIcon";
 
 const ContentForm = ({ dispatch }) => {
   const changeHandler = (e) => {

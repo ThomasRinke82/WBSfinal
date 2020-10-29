@@ -1,7 +1,7 @@
 import React from "react";
-import useFirestore from "./Hooks/useFirestore";
+import useFirestore from "../Hooks/useFirestore";
 import { connect } from "react-redux";
-import { setTemplate } from "./Redux/Actions";
+import { setTemplate } from "../Redux/Actions";
 import "./TemplateGrid.css";
 
 const TemplateGrid = ({ dispatch }) => {

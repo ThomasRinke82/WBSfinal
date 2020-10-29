@@ -1,8 +1,8 @@
 import React from "react";
-import "./DesignsStyle.css";
-import ImageGenerator from "../ImageGenerator";
-import UploadImage from "../UploadImage";
-import EditDisplay from "../EditDisplay";
+import "./Background.css";
+import ImageGenerator from "../ImageGenerator/ImageGenerator";
+import UploadImage from "../UploadImage/UploadImage";
+import EditDisplay from "../EditDisplay/EditDisplay";
 
 function Background() {
   return (

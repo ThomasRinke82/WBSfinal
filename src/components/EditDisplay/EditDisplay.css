@@ -34,6 +34,7 @@
 
 .templateData {
   position: absolute;
+  width: 100%;
 }
 
 #templateData {
@@ -41,14 +42,17 @@
 
 .icon-home {
   position: absolute;
+  margin-top: 10rem;
+  margin-left: 5rem;
 }
 
 #icon-home {
-  width: 100px;
 }
 
 .icon-away {
   position: absolute;
+  margin-top: 10rem;
+  margin-left: 25rem;
 }
 
 #icon-away {
@@ -61,7 +65,4 @@
   align-items: center;
   justify-content: center;
   height: 70px;
-}
-
-#buttongroup {
 }

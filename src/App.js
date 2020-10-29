@@ -3,11 +3,11 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 //importing components
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Designs from "./components/Designs";
-import UserSelection from "./components/UserSelection";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
+import Designs from "./components/Designs/Designs";
+import UserSelection from "./components/UserSelection/UserSelection";
 
 function App() {
   return (

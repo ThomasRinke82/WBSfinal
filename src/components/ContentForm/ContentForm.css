@@ -1,0 +1,22 @@
+.ContentForm {
+  background-color: #5effac;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-wrap {
+  background-color: lightblue;
+}
+
+.team-wrap {
+  background-color: lightseagreen;
+}
+
+.result-wrap {
+  background-color: lightcoral;
+}

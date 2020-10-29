@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { setBackgroundImg } from "./Redux/Actions";
+import { setBackgroundImg } from "../Redux/Actions";
 import "./ImageGenerator.css";
 import axios from "axios";
 

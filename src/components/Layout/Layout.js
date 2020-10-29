@@ -1,7 +1,7 @@
 import React from "react";
-import "./DesignsStyle.css";
-import EditDisplay from "../EditDisplay";
-import TemplateGrid from "../TemplateGrid";
+import "./Layout.css";
+import EditDisplay from "../EditDisplay/EditDisplay";
+import TemplateGrid from "../TemplateGrid/TemplateGrid";
 
 function Layout() {
   return (

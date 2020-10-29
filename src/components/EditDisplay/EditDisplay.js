@@ -38,10 +38,10 @@ const EditDisplay = ({
     <div className="editDisplay">
       <div className="canvas" ref={imageContainerRef}>
         <div className=" bgData">
-          <img id="bgData" src={bgData} style={{ height: 400 }} />
+          <img id="bgData" src={bgData} />
         </div>
         <div className="templateData">
-          <img id="templateData" src={templateData} style={{ height: 400 }} />
+          <img id="templateData" src={templateData} />
         </div>
         <div className="teams">
           <h2 id="team-home">{teamHome}</h2>

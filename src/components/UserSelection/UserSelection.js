@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImageGrid from "./ImageGrid";
+import ImageGrid from "../ImageGrid/ImageGrid";
 import Modal from "./Modal";
 import "./UserSelection.css";
 

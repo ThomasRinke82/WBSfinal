@@ -2,10 +2,10 @@ import React from "react";
 import "./Designs.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Content from "./Designs/Content";
-import Background from "./Designs/Background";
-import Layout from "./Designs/Layout";
-import Magic from "./Designs/Magic";
+import Content from "../Content/Content";
+import Background from "../Background/Background";
+import Layout from "../Layout/Layout";
+import Magic from "../Magic/Magic";
 
 function Designs() {
   return (

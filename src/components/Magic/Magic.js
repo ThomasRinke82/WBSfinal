@@ -1,5 +1,5 @@
 import React from "react";
-import "./DesignsStyle.css";
+import "./Magic.css";
 
 const Magic = () => {
   return <div className="magic">Wait for it!</div>;

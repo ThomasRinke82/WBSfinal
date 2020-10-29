@@ -1,0 +1,9 @@
+.TemplateCollection {
+  background-color: #5effac;
+  color: #0c343f;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

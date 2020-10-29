@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "./Modal.css";
 
 const Modal = ({ selectedImage, setSelectedImage }) => {
   //click on an image to enlarge it
