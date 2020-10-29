@@ -20,7 +20,7 @@ const TemplateGrid = ({ dispatch }) => {
               <img src={doc.url} alt={doc.name} onClick={clickHandler} />
             </div>
           ))
-        : "error"}
+        : "wait"}
     </div>
   );
 };

@@ -1,4 +1,43 @@
-.EditDisplay {
+.editDisplay {
   background-color: lightblue;
-  height: 400px;
+  min-height: 400px;
+}
+
+.canvas {
+  position: relative;
+}
+
+#team-home {
+  position: absolute;
+}
+
+#team-away {
+  position: absolute;
+  color: white;
+}
+
+#score-home {
+  position: absolute;
+}
+
+#score-away {
+  position: absolute;
+  color: white;
+}
+
+#bgData {
+  position: absolute;
+  height: auto;
+}
+
+#templateData {
+  position: absolute;
+}
+
+#icon-home {
+  position: absolute;
+}
+
+#icon-away {
+  position: absolute;
 }

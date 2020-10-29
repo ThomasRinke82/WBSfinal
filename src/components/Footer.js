@@ -4,7 +4,10 @@ import Style from "./Footer.css";
 function Footer() {
   return (
     <div className="Footer">
-      <h1>Footer Component</h1>
+      <img
+        id="footer-logo"
+        src="https://firebasestorage.googleapis.com/v0/b/final-project-wbs.appspot.com/o/assets%2FSpoyou-logo-03.png?alt=media&token=fe97bc39-7e37-46e1-b891-1385a5f9dfa2"
+      />
     </div>
   );
 }

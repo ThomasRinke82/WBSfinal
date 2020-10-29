@@ -1,9 +1,14 @@
 .Footer {
-  background-color: blue;
+  background-color: #0c343f;
   color: white;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 5rem;
+  padding-left: 2rem;
+}
+
+#footer-logo {
+  width: 100px;
 }

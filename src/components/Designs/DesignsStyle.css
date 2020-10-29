@@ -19,7 +19,7 @@
 
 .ContentForm {
   background-color: lightgreen;
-  min-height: 100px;
+  min-height: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,4 +36,8 @@
 
 .result-wrap {
   background-color: lightcoral;
+}
+
+.magic {
+  height: 200px;
 }

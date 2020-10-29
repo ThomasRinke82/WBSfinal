@@ -17,9 +17,6 @@ function App() {
         <div>
           <ul className="navbar">
             <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
               <Link to="/designs">Create Awesome Designs</Link>
             </li>
             <li>
