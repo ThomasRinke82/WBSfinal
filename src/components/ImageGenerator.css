@@ -23,15 +23,12 @@
   opacity: 0.8;
 }
 
-.choiceArea {
-  background-color: rgb(202, 216, 221, 0.3);
-  height: 300px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.imageSelection {
 }
 
 img:hover {
   opacity: 1;
+}
+
+#test {
 }

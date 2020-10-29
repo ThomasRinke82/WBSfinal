@@ -9,7 +9,7 @@ function Layout() {
       <EditDisplay />
       <TemplateGrid />
       <div className="TemplateCollection">
-        <h4>Selection of templates coming from backend database</h4>
+        <h4>Choose your Template</h4>
         <select name="templates" id="templates">
           <option value="" disabled selected>
             Select Template

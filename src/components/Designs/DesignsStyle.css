@@ -9,7 +9,8 @@
 }
 
 .TemplateCollection {
-  background-color: lightgreen;
+  background-color: #5effac;
+  color: #0c343f;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -17,8 +18,20 @@
   align-items: center;
 }
 
+.DesignsLayout {
+}
+
+.UploadSection {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
 .ContentForm {
-  background-color: lightgreen;
+  background-color: #5effac;
+  margin-top: 10px;
+  margin-bottom: 10px;
   min-height: 200px;
   display: flex;
   flex-direction: row;

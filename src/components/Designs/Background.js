@@ -8,8 +8,10 @@ function Background() {
   return (
     <div className="DesignsLayout">
       <EditDisplay />
-      <UploadImage />
-      <ImageGenerator />
+      <div className="UploadSection">
+        <UploadImage />
+        <ImageGenerator />
+      </div>
     </div>
   );
 }

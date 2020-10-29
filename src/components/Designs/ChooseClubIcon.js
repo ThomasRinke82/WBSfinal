@@ -1,8 +1,8 @@
 import React from "react";
-import useFirestore from "./Hooks/useFirestore";
+import useFirestore from "../Hooks/useFirestore";
 import { connect } from "react-redux";
-import { setClubIcon } from "./Redux/Actions";
-import Style from "./TemplateGrid.css";
+import { setClubIcon } from "../Redux/Actions";
+import Style from "../TemplateGrid.css";
 
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";

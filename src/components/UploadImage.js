@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setBackgroundImg } from "./Redux/Actions";
+import Styles from "../App.css";
 
 const UploadImage = ({ dispatch }) => {
   const handleChange = (e) => {
@@ -8,7 +9,7 @@ const UploadImage = ({ dispatch }) => {
   };
 
   return (
-    <div className="App">
+    <div className="UploadImage">
       <input
         type="file"
         name="file"

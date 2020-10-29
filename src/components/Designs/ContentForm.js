@@ -3,7 +3,7 @@ import Styles from "./DesignsStyle.css";
 import { setTeamName, setScore } from "../Redux/Actions";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
-import ChooseClubIcon from "../ChooseClubIcon";
+import ChooseClubIcon from "./ChooseClubIcon";
 
 const ContentForm = ({ dispatch }) => {
   const changeHandler = (e) => {

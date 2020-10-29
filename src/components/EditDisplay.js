@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { connect } from "react-redux";
+import domtoimage from "dom-to-image";
 import Styles from "./EditDisplay.css";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
@@ -15,14 +16,32 @@ const EditDisplay = ({
   iconAway,
   updated,
 }) => {
+  let imageContainerRef = useRef(null);
+  let resultContainerRef = useRef(null);
+
+  const handleSaveAsImage = () => {
+    const { current } = resultContainerRef;
+
+    domtoimage
+      .toPng(imageContainerRef.current)
+      .then((dataUrl) => {
+        let design = new Image();
+        design.src = dataUrl;
+        current.appendChild(design);
+      })
+      .catch((error) => {
+        console.log("there is an error:", error);
+      });
+  };
+
   return (
     <div className="editDisplay">
-      <div className="canvas">
-        <div id="bgData">
-          <img src={bgData} style={{ height: 400 }} />
+      <div className="canvas" ref={imageContainerRef}>
+        <div className=" bgData">
+          <img id="bgData" src={bgData} style={{ height: 400 }} />
         </div>
-        <div id="templateData">
-          <img src={templateData} style={{ height: 400 }} />
+        <div className="templateData">
+          <img id="templateData" src={templateData} style={{ height: 400 }} />
         </div>
         <div className="teams">
           <h2 id="team-home">{teamHome}</h2>
@@ -32,22 +51,23 @@ const EditDisplay = ({
           <h2 id="score-home">{scoreHome}</h2>
           <h2 id="score-away">{scoreAway}</h2>
         </div>
-        <div id="icon-home">
-          <img src={iconHome} />
+        <div className="icon-home">
+          <img id="icon-home" src={iconHome} />
         </div>
-        <div id="icon-away">
-          <img src={iconAway} />
+        <div className="icon-away">
+          <img id="icon-away" src={iconAway} />
         </div>
       </div>
-      <div className="EditDisplayButtons">
-        {updated ? (
-          <ButtonGroup variant="contained" color="secondary">
-            <Button>Save</Button>
+
+      {updated ? (
+        <div className="EditDisplayButtons">
+          <ButtonGroup id="buttongroup" variant="contained" color="secondary">
+            <Button onClick={handleSaveAsImage}>Save</Button>
             <Button>Share</Button>
-            <Button disabled>Delete</Button>
+            <Button>Delete</Button>
           </ButtonGroup>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </div>
   );
 };

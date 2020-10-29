@@ -27,7 +27,7 @@ const ImageGenerator = ({ dispatch }) => {
   };
 
   return (
-    <div>
+    <div className="imageSelection">
       <h3>Choose a sport, then click on a picture to display it.</h3>
 
       <select name="sports" id="sports" onChange={selectSports}>

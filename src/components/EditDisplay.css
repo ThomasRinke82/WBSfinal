@@ -1,10 +1,12 @@
 .editDisplay {
-  background-color: lightblue;
-  min-height: 400px;
+  margin-top: 10px;
 }
 
 .canvas {
   position: relative;
+  background-color: #f5f5f5;
+  height: 1080px;
+  width: 1080px;
 }
 
 #team-home {
@@ -13,7 +15,6 @@
 
 #team-away {
   position: absolute;
-  color: white;
 }
 
 #score-home {
@@ -22,22 +23,45 @@
 
 #score-away {
   position: absolute;
-  color: white;
+}
+
+.bgData {
+  position: absolute;
 }
 
 #bgData {
+}
+
+.templateData {
   position: absolute;
-  height: auto;
 }
 
 #templateData {
+}
+
+.icon-home {
   position: absolute;
 }
 
 #icon-home {
+  width: 100px;
+}
+
+.icon-away {
   position: absolute;
 }
 
 #icon-away {
-  position: absolute;
+}
+
+.EditDisplayButtons {
+  background-color: #0c343f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+
+#buttongroup {
 }
