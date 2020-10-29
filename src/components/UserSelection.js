@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ImageGrid from "./ImageGrid";
 import Modal from "./Modal";
-import Styles from "./UserSelection.css";
+import "./UserSelection.css";
 
 function UserSelection() {
   const [selectedImage, setSelectedImage] = useState();

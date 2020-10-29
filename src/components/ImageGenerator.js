@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { setBackgroundImg } from "./Redux/Actions";
-import Styles from "./ImageGenerator.css";
+import "./ImageGenerator.css";
 import axios from "axios";
 
 const ImageGenerator = ({ dispatch }) => {

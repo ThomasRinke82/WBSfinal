@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./Designs.css";
+import "./Designs.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Content from "./Designs/Content";

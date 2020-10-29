@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./DesignsStyle.css";
+import "./DesignsStyle.css";
 import EditDisplay from "../EditDisplay";
 import TemplateGrid from "../TemplateGrid";
 

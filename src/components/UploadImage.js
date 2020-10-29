@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setBackgroundImg } from "./Redux/Actions";
-import Styles from "../App.css";
+import "../App.css";
 
 const UploadImage = ({ dispatch }) => {
   const handleChange = (e) => {

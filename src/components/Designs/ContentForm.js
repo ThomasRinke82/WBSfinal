@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./DesignsStyle.css";
+import "./DesignsStyle.css";
 import { setTeamName, setScore } from "../Redux/Actions";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";

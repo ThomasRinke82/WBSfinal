@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { connect } from "react-redux";
 import domtoimage from "dom-to-image";
-import Styles from "./EditDisplay.css";
+import "./EditDisplay.css";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 

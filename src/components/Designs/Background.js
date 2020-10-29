@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./DesignsStyle.css";
+import "./DesignsStyle.css";
 import ImageGenerator from "../ImageGenerator";
 import UploadImage from "../UploadImage";
 import EditDisplay from "../EditDisplay";
