@@ -1,5 +1,5 @@
 .ContentForm {
-  background-color: #5effac;
+  background-color: #f5f5f5;
   margin-top: 10px;
   margin-bottom: 10px;
   min-height: 200px;
@@ -10,13 +10,13 @@
 }
 
 .icon-wrap {
-  background-color: lightblue;
+  background-color: #5effac;
 }
 
 .team-wrap {
-  background-color: lightseagreen;
+  background-color: #5effac;
 }
 
 .result-wrap {
-  background-color: lightcoral;
+  background-color: #5effac;
 }

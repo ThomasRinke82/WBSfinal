@@ -4,6 +4,7 @@ import {
   SET_TEAMNAME,
   SET_SCORE,
   SET_CLUBICON,
+  SET_FILEURL,
 } from "./ActionsTypes";
 
 const initialState = {
@@ -16,6 +17,7 @@ const initialState = {
   iconHome: "",
   iconAway: "",
   updated: false,
+  fileUrl: "",
 };
 
 export default function StateUpdater(state = initialState, action) {
@@ -62,6 +64,11 @@ export default function StateUpdater(state = initialState, action) {
           action.payload.inputName === "icon-away"
             ? action.payload.imgData
             : state.iconAway,
+      };
+    case SET_FILEURL:
+      return {
+        ...state,
+        setFileUrl: action.fileUrl,
       };
     default:
       return state;

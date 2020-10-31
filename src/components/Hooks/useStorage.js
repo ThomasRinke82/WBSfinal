@@ -6,10 +6,6 @@ import {
 } from "../Firebase/config";
 
 const useStorage = (file) => {
-  const [progress, setProgress] = useState();
-  const [error, setError] = useState();
-  const [url, setUrl] = useState();
-
   useEffect(() => {
     // references
     const storageRef = projectStorage.ref(file.name);
@@ -17,13 +13,8 @@ const useStorage = (file) => {
 
     storageRef.put(file).on(
       "state_changed",
-      (snap) => {
-        let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
-        setProgress(percentage);
-      },
-      (err) => {
-        setError(err);
-      },
+      (snap) => {},
+      (err) => {},
       async () => {
         const url = await storageRef.getDownloadURL();
         const createdAt = timestamp();
@@ -33,7 +24,7 @@ const useStorage = (file) => {
     );
   }, [file]);
 
-  return { progress, url, error };
+  return { url };
 };
 
 export default useStorage;

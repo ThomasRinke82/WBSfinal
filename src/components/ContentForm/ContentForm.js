@@ -7,8 +7,6 @@ import ChooseClubIcon from "../ChooseClubIcon/ChooseClubIcon";
 
 const ContentForm = ({ dispatch }) => {
   const changeHandler = (e) => {
-    console.log(e.target.value);
-    console.log(e.target.name);
     dispatch(setTeamName(e.target.value, e.target.name));
     dispatch(setScore(e.target.value, e.target.name));
   };

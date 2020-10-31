@@ -44,7 +44,7 @@ const ImageGenerator = ({ dispatch }) => {
           ? images.map((image) => (
               <div key={image.id} className="img-wrap">
                 <img
-                  src={image.urls.small}
+                  src={image.urls.regular}
                   alt={image.alt_description}
                   onClick={clickHandler}
                 />

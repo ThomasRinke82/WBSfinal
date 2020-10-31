@@ -4,6 +4,7 @@ import {
   SET_TEAMNAME,
   SET_SCORE,
   SET_CLUBICON,
+  SET_FILEURL,
 } from "./ActionsTypes";
 
 export const setBackgroundImg = (imgData) => {
@@ -38,5 +39,12 @@ export const setClubIcon = (imgData, inputName) => {
   return {
     type: SET_CLUBICON,
     payload: { imgData, inputName },
+  };
+};
+
+export const setFileUrl = (fileUrl) => {
+  return {
+    type: SET_FILEURL,
+    fileUrl: fileUrl,
   };
 };

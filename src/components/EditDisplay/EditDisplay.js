@@ -1,9 +1,18 @@
 import React, { useRef } from "react";
 import { connect } from "react-redux";
-import domtoimage from "dom-to-image";
-import "./EditDisplay.css";
+//import domtoimage from "dom-to-image";
+import { toPng } from "html-to-image";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
+import { v4 as uuidv4 } from "uuid";
+
+import {
+  projectStorage,
+  projectFirestore,
+  timestamp,
+} from "../Firebase/config";
+
+import "./EditDisplay.css";
 
 const EditDisplay = ({
   bgData,
@@ -15,33 +24,43 @@ const EditDisplay = ({
   iconHome,
   iconAway,
   updated,
+  fileUrl,
 }) => {
   let imageContainerRef = useRef(null);
-  let resultContainerRef = useRef(null);
 
-  const handleSaveAsImage = () => {
-    const { current } = resultContainerRef;
-
-    domtoimage
-      .toPng(imageContainerRef.current)
+  const handleSaveAsImage = async () => {
+    toPng(imageContainerRef.current)
       .then((dataUrl) => {
-        let design = new Image();
-        design.src = dataUrl;
-        current.appendChild(design);
+        let ref = projectStorage.ref().child(uuidv4());
+
+        ref.putString(dataUrl, "data_url").then((snapshot) => {
+          ref.getDownloadURL().then((value) => {
+            projectFirestore
+              .collection("images")
+              .add({
+                createdAt: timestamp,
+                url: value,
+              })
+              .then((docref) => console.log("all good"))
+              .catch((e) => console.error(e));
+          });
+
+          console.log(snapshot);
+        });
       })
-      .catch((error) => {
-        console.log("there is an error:", error);
+      .catch(function (error) {
+        console.error("oops, something went wrong!", error);
       });
   };
 
   return (
     <div className="editDisplay">
       <div className="canvas" ref={imageContainerRef}>
-        <div className=" bgData">
-          <img id="bgData" src={bgData} />
+        <div className="bgData">
+          <img id="bgData" src={bgData} alt="" />
         </div>
         <div className="templateData">
-          <img id="templateData" src={templateData} />
+          <img id="templateData" src={templateData} alt="" />
         </div>
         <div className="teams">
           <h2 id="team-home">{teamHome}</h2>
@@ -52,10 +71,10 @@ const EditDisplay = ({
           <h2 id="score-away">{scoreAway}</h2>
         </div>
         <div className="icon-home">
-          <img id="icon-home" src={iconHome} />
+          <img id="icon-home" src={iconHome} alt="" />
         </div>
         <div className="icon-away">
-          <img id="icon-away" src={iconAway} />
+          <img id="icon-away" src={iconAway} alt="" />
         </div>
       </div>
 
@@ -83,6 +102,7 @@ const mapStateToProps = (state) => {
     iconHome: state.iconHome,
     iconAway: state.iconAway,
     updated: state.updated,
+    fileUrl: state.fileUrl,
   };
 };
 
