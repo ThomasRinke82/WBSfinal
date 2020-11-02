@@ -30,7 +30,7 @@
 
 #score-home {
   position: absolute;
-  margin-top: 50rem;
+  margin-top: 45rem;
   margin-left: 17rem;
   font-size: 10rem;
   color: white;
@@ -38,7 +38,7 @@
 
 #score-away {
   position: absolute;
-  margin-top: 50rem;
+  margin-top: 45rem;
   margin-left: 46rem;
   font-size: 10rem;
   color: white;

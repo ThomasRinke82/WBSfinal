@@ -14,10 +14,10 @@ function Designs() {
         <div>
           <ul className="DesignsNavbar">
             <li>
-              <Link to="/designs/layout">Layout</Link>
+              <Link to="/designs/background">Background</Link>
             </li>
             <li>
-              <Link to="/designs/background">Background</Link>
+              <Link to="/designs/layout">Layout</Link>
             </li>
             <li>
               <Link to="/designs/content">Content</Link>
