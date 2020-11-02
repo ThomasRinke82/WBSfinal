@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Designs from "./components/Designs/Designs";
 import UserSelection from "./components/UserSelection/UserSelection";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -31,13 +32,16 @@ function App() {
             <Route path="/designs">
               <Designs />
             </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
             <Route path="/">
               <Home />
             </Route>
           </Switch>
         </div>
       </Router>
-      <Footer />
+      <Footer style={{ position: "fixed", bottom: 0 }} />
     </div>
   );
 }
