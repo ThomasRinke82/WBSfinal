@@ -4,7 +4,7 @@ import {
   SET_TEAMNAME,
   SET_SCORE,
   SET_CLUBICON,
-  SET_FILEURL,
+  SET_DELETE,
 } from "./ActionsTypes";
 
 export const setBackgroundImg = (imgData) => {
@@ -42,9 +42,8 @@ export const setClubIcon = (imgData, inputName) => {
   };
 };
 
-export const setFileUrl = (fileUrl) => {
+export const setDelete = () => {
   return {
-    type: SET_FILEURL,
-    fileUrl: fileUrl,
+    type: SET_DELETE,
   };
 };

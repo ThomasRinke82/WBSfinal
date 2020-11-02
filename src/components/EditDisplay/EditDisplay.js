@@ -24,7 +24,7 @@ const EditDisplay = ({
   iconHome,
   iconAway,
   updated,
-  fileUrl,
+  initialState,
 }) => {
   let imageContainerRef = useRef(null);
 
@@ -44,14 +44,14 @@ const EditDisplay = ({
               .then((docref) => console.log("all good"))
               .catch((e) => console.error(e));
           });
-
-          console.log(snapshot);
         });
       })
       .catch(function (error) {
         console.error("oops, something went wrong!", error);
       });
   };
+
+  const handleDelete = () => {};
 
   return (
     <div className="editDisplay">
@@ -62,19 +62,19 @@ const EditDisplay = ({
         <div className="templateData">
           <img id="templateData" src={templateData} alt="" />
         </div>
-        <div className="teams">
+        <div className="home">
           <h2 id="team-home">{teamHome}</h2>
-          <h2 id="team-away">{teamAway}</h2>
-        </div>
-        <div className="scores">
+          <div className="icon-home">
+            <img id="icon-home" src={iconHome} alt="" />
+          </div>
           <h2 id="score-home">{scoreHome}</h2>
+        </div>
+        <div className="away">
+          <h2 id="team-away">{teamAway}</h2>
+          <div className="icon-away">
+            <img id="icon-away" src={iconAway} alt="" />
+          </div>
           <h2 id="score-away">{scoreAway}</h2>
-        </div>
-        <div className="icon-home">
-          <img id="icon-home" src={iconHome} alt="" />
-        </div>
-        <div className="icon-away">
-          <img id="icon-away" src={iconAway} alt="" />
         </div>
       </div>
 
@@ -83,7 +83,7 @@ const EditDisplay = ({
           <ButtonGroup id="buttongroup" variant="contained" color="secondary">
             <Button onClick={handleSaveAsImage}>Save</Button>
             <Button>Share</Button>
-            <Button>Delete</Button>
+            <Button onClick={handleDelete}>Delete</Button>
           </ButtonGroup>
         </div>
       ) : null}
@@ -103,6 +103,7 @@ const mapStateToProps = (state) => {
     iconAway: state.iconAway,
     updated: state.updated,
     fileUrl: state.fileUrl,
+    initialState: state.initialState,
   };
 };
 

@@ -7,41 +7,23 @@
   background-color: #f5f5f5;
   height: 1080px;
   width: 1080px;
-  /*
-  change display size:
-  transform: scale(0.5);*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-#team-home {
-  position: absolute;
-  margin-top: 15rem;
-  margin-left: 10rem;
-  font-size: 5rem;
-  color: white;
+.home {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#team-away {
-  position: absolute;
-  margin-top: 15rem;
-  margin-left: 40rem;
-  font-size: 5rem;
-  color: white;
-}
-
-#score-home {
-  position: absolute;
-  margin-top: 45rem;
-  margin-left: 17rem;
-  font-size: 10rem;
-  color: white;
-}
-
-#score-away {
-  position: absolute;
-  margin-top: 45rem;
-  margin-left: 46rem;
-  font-size: 10rem;
-  color: white;
+.away {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bgData {
@@ -51,35 +33,58 @@
   overflow: hidden;
 }
 
-#bgData {
-  min-height: 100%;
-  min-width: 100%;
-}
-
 .templateData {
   position: absolute;
   width: 100%;
 }
 
-#templateData {
+.icon-away {
+  position: absolute;
 }
 
 .icon-home {
   position: absolute;
-  margin-top: 25rem;
-  margin-left: 10rem;
+}
+
+#bgData {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+#team-home {
+  position: absolute;
+  margin-top: 15rem;
+  font-size: 5rem;
+  color: white;
+}
+
+#team-away {
+  position: absolute;
+  margin-top: 15rem;
+  font-size: 5rem;
+  color: white;
+}
+
+#score-home {
+  position: absolute;
+  margin-top: 45rem;
+  font-size: 10rem;
+  color: white;
+}
+
+#score-away {
+  position: absolute;
+  margin-top: 45rem;
+  font-size: 10rem;
+  color: white;
 }
 
 #icon-home {
-}
-
-.icon-away {
-  position: absolute;
   margin-top: 25rem;
-  margin-left: 40rem;
 }
 
 #icon-away {
+  margin-top: 25rem;
 }
 
 .EditDisplayButtons {

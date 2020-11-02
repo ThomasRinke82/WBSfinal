@@ -16,4 +16,21 @@
 }
 
 .button-wrap {
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-space-between;
+  align-items: center;
+}
+
+.icon {
+  border-radius: 50%;
+  margin: 3px;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.icon:hover {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }

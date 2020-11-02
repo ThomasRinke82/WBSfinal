@@ -22,6 +22,6 @@ export const SET_CLUBICON = {
   type: "SET_CLUBICON",
 };
 
-export const SET_FILEURL = {
-  type: "SET_FILEURL",
+export const SET_DELETE = {
+  type: "SET_DELETE",
 };
