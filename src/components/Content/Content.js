@@ -1,13 +1,17 @@
 import React from "react";
 import "./Content.css";
 import EditDisplay from "../EditDisplay/EditDisplay";
-import ContentForm from "../ContentForm/ContentForm";
+import ContentFormTeams from "../ContentForm/ContentFormTeams";
+import ContentFormLeague from "../ContentForm/ContentFormLeague";
 
 function Content() {
   return (
-    <div className="ContentDesign">
+    <div className="content-design">
       <EditDisplay />
-      <ContentForm />
+      <div className="forms">
+        <ContentFormLeague />
+        <ContentFormTeams />
+      </div>
     </div>
   );
 }

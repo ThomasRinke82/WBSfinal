@@ -22,6 +22,14 @@ export const SET_CLUBICON = {
   type: "SET_CLUBICON",
 };
 
+export const SET_LEAGUE = {
+  type: "SET_LEAGUE",
+};
+
+export const SET_MATCHDAY = {
+  type: "SET_MATCHDAY",
+};
+
 export const SET_DELETE = {
   type: "SET_DELETE",
 };

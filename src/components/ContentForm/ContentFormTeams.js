@@ -5,13 +5,13 @@ import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
 import ChooseClubIcon from "../ChooseClubIcon/ChooseClubIcon";
 
-const ContentForm = ({ dispatch }) => {
+const ContentFormTeams = ({ dispatch }) => {
   const changeHandler = (e) => {
     dispatch(setTeamName(e.target.value, e.target.name));
     dispatch(setScore(e.target.value, e.target.name));
   };
   return (
-    <div className="ContentForm">
+    <div className="contentform-teams">
       <form>
         <div className="icon-wrap">
           <ChooseClubIcon name={"icon-home"} />
@@ -58,4 +58,4 @@ const ContentForm = ({ dispatch }) => {
   );
 };
 
-export default connect()(ContentForm);
+export default connect()(ContentFormTeams);

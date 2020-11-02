@@ -24,6 +24,7 @@ const ImageCard = ({ imageUrl }) => {
         >
           <FacebookIcon className="icon" size={42} />
         </FacebookShareButton>
+
         <TwitterShareButton
           url={imageUrl}
           title={"Awesome Design!"}

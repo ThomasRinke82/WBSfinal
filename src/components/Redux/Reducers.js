@@ -4,6 +4,8 @@ import {
   SET_TEAMNAME,
   SET_SCORE,
   SET_CLUBICON,
+  SET_LEAGUE,
+  SET_MATCHDAY,
   SET_DELETE,
 } from "./ActionsTypes";
 
@@ -17,6 +19,8 @@ const initialState = {
   iconHome: "",
   iconAway: "",
   updated: false,
+  league: "",
+  matchday: "",
 };
 
 export default function StateUpdater(state = initialState, action) {
@@ -64,6 +68,20 @@ export default function StateUpdater(state = initialState, action) {
             ? action.payload.imgData
             : state.iconAway,
       };
+    case SET_LEAGUE:
+      return {
+        ...state,
+        updated: true,
+        league: action.payload.textValue,
+      };
+
+    case SET_MATCHDAY:
+      return {
+        ...state,
+        updated: true,
+        matchday: action.payload.textValue,
+      };
+
     case SET_DELETE:
       return {
         ...state,

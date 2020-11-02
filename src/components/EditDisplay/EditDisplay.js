@@ -25,6 +25,8 @@ const EditDisplay = ({
   iconAway,
   updated,
   initialState,
+  league,
+  matchday,
 }) => {
   let imageContainerRef = useRef(null);
 
@@ -56,6 +58,10 @@ const EditDisplay = ({
   return (
     <div className="editDisplay">
       <div className="canvas" ref={imageContainerRef}>
+        <div className="league-info">
+          <h1 id="league">{league}</h1>
+          <h1 id="matchday">{matchday}</h1>
+        </div>
         <div className="bgData">
           <img id="bgData" src={bgData} alt="" />
         </div>
@@ -104,6 +110,8 @@ const mapStateToProps = (state) => {
     updated: state.updated,
     fileUrl: state.fileUrl,
     initialState: state.initialState,
+    league: state.league,
+    matchday: state.matchday,
   };
 };
 

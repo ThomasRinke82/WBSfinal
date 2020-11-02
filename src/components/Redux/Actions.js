@@ -4,6 +4,8 @@ import {
   SET_TEAMNAME,
   SET_SCORE,
   SET_CLUBICON,
+  SET_LEAGUE,
+  SET_MATCHDAY,
   SET_DELETE,
 } from "./ActionsTypes";
 
@@ -39,6 +41,20 @@ export const setClubIcon = (imgData, inputName) => {
   return {
     type: SET_CLUBICON,
     payload: { imgData, inputName },
+  };
+};
+
+export const setLeague = (textValue, inputName) => {
+  return {
+    type: SET_LEAGUE,
+    payload: { textValue, inputName },
+  };
+};
+
+export const setMatchday = (textValue, inputName) => {
+  return {
+    type: SET_MATCHDAY,
+    payload: { textValue, inputName },
   };
 };
 
