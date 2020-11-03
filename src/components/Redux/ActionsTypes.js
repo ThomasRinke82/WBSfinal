@@ -30,6 +30,18 @@ export const SET_MATCHDAY = {
   type: "SET_MATCHDAY",
 };
 
+export const SET_LOCATION = {
+  type: "SET_LOCATION",
+};
+
 export const SET_DELETE = {
   type: "SET_DELETE",
+};
+
+export const SET_PERSONNAME = {
+  type: "SET_PERSONNAME",
+};
+
+export const SET_QUOTE = {
+  type: "SET_QUOTE",
 };

@@ -1,0 +1,25 @@
+.template-component-wrap {
+  position: relative;
+  height: 1080px;
+  width: 1080px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.team-wrap {
+}
+
+.quote-text {
+  position: absolute;
+  margin-top: 15rem;
+  font-size: 5rem;
+  color: white;
+}
+
+.person {
+  position: absolute;
+  margin-top: 20rem;
+  font-size: 5rem;
+  color: white;
+}

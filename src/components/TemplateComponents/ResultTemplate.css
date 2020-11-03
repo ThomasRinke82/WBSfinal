@@ -1,0 +1,82 @@
+.template-component-wrap {
+  position: relative;
+  height: 1080px;
+  width: 1080px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.league-info {
+  z-index: 500;
+}
+
+.home {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.away {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-home {
+  position: absolute;
+}
+
+.icon-away {
+  position: absolute;
+}
+
+#league {
+  position: absolute;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  font-size: 5rem;
+  color: white;
+}
+
+#matchday {
+  position: absolute;
+  margin-top: 8rem;
+  margin-left: 3rem;
+  font-size: 4rem;
+  color: white;
+}
+
+#location {
+  position: absolute;
+  margin-top: 12.5rem;
+  margin-left: 3rem;
+  font-size: 3rem;
+  color: white;
+}
+
+#team-home,
+#team-away {
+  position: absolute;
+  margin-top: 23rem;
+  font-size: 5rem;
+  color: white;
+}
+
+#score-home,
+#score-away {
+  position: absolute;
+  margin-top: 47rem;
+  font-size: 10rem;
+  color: white;
+}
+
+#icon-home {
+  margin-top: 29rem;
+}
+
+#icon-away {
+  margin-top: 29rem;
+}

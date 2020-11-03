@@ -6,7 +6,10 @@ import {
   SET_CLUBICON,
   SET_LEAGUE,
   SET_MATCHDAY,
+  SET_LOCATION,
   SET_DELETE,
+  SET_PERSONNAME,
+  SET_QUOTE,
 } from "./ActionsTypes";
 
 const initialState = {
@@ -21,6 +24,9 @@ const initialState = {
   updated: false,
   league: "",
   matchday: "",
+  location: "",
+  personName: "",
+  quote: "",
 };
 
 export default function StateUpdater(state = initialState, action) {
@@ -82,11 +88,22 @@ export default function StateUpdater(state = initialState, action) {
         matchday: action.payload.textValue,
       };
 
-    case SET_DELETE:
+    case SET_LOCATION:
       return {
         ...state,
-        initialState,
+        updated: true,
+        location: action.payload.textValue,
       };
+
+    case SET_DELETE:
+      return initialState;
+
+    case SET_PERSONNAME:
+      return { ...state, updated: true, personName: action.personName };
+
+    case SET_QUOTE:
+      return { ...state, updated: true, quote: action.quote };
+
     default:
       return state;
   }

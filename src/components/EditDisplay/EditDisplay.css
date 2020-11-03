@@ -12,24 +12,6 @@
   justify-content: space-around;
 }
 
-.league-info {
-  z-index: 1000;
-}
-
-.home {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.away {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .bgData {
   position: absolute;
   height: 1080px;
@@ -42,57 +24,9 @@
   width: 100%;
 }
 
-.icon-home {
-  position: absolute;
-}
-
-.icon-away {
-  position: absolute;
-}
-
 #bgData {
   min-height: 100%;
   min-width: 100%;
-}
-
-#league {
-  position: absolute;
-  margin-top: 3rem;
-  margin-left: 3rem;
-  font-size: 4rem;
-  color: white;
-}
-
-#matchday {
-  position: absolute;
-  margin-top: 7rem;
-  margin-left: 3rem;
-  font-size: 3rem;
-  color: white;
-}
-
-#team-home,
-#team-away {
-  position: absolute;
-  margin-top: 15rem;
-  font-size: 5rem;
-  color: white;
-}
-
-#score-home,
-#score-away {
-  position: absolute;
-  margin-top: 45rem;
-  font-size: 10rem;
-  color: white;
-}
-
-#icon-home {
-  margin-top: 25rem;
-}
-
-#icon-away {
-  margin-top: 25rem;
 }
 
 .EditDisplayButtons {

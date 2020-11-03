@@ -28,7 +28,7 @@ const ImageGenerator = ({ dispatch }) => {
 
   return (
     <div className="imageSelection">
-      <h3>Choose a sport, then click on a picture to display it.</h3>
+      <h3>Choose your sport.</h3>
 
       <select name="sports" id="sports" onChange={selectSports}>
         <option value="" disabled selected>
@@ -52,7 +52,9 @@ const ImageGenerator = ({ dispatch }) => {
                 <br />
               </div>
             ))
-          : "Choose your sport!"}
+          : console.log(
+              'Images will come once you choose one in the "sports" dropdown section.'
+            )}
       </div>
     </div>
   );

@@ -5,6 +5,9 @@ import { toPng } from "html-to-image";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { v4 as uuidv4 } from "uuid";
+import { setDelete } from "../Redux/Actions";
+import ResultTemplate from "../TemplateComponents/ResultTemplate";
+import QuoteTemplate from "../TemplateComponents/QuoteTemplate";
 
 import {
   projectStorage,
@@ -14,20 +17,7 @@ import {
 
 import "./EditDisplay.css";
 
-const EditDisplay = ({
-  bgData,
-  templateData,
-  teamHome,
-  teamAway,
-  scoreHome,
-  scoreAway,
-  iconHome,
-  iconAway,
-  updated,
-  initialState,
-  league,
-  matchday,
-}) => {
+const EditDisplay = ({ bgData, templateData, updated, dispatch }) => {
   let imageContainerRef = useRef(null);
 
   const handleSaveAsImage = async () => {
@@ -44,6 +34,7 @@ const EditDisplay = ({
                 url: value,
               })
               .then((docref) => console.log("all good"))
+              .orderBy("createdAt", "desc")
               .catch((e) => console.error(e));
           });
         });
@@ -53,42 +44,27 @@ const EditDisplay = ({
       });
   };
 
-  const handleDelete = () => {};
+  const handleDelete = () => {
+    dispatch(setDelete());
+  };
 
   return (
     <div className="editDisplay">
       <div className="canvas" ref={imageContainerRef}>
-        <div className="league-info">
-          <h1 id="league">{league}</h1>
-          <h1 id="matchday">{matchday}</h1>
-        </div>
         <div className="bgData">
           <img id="bgData" src={bgData} alt="" />
         </div>
         <div className="templateData">
           <img id="templateData" src={templateData} alt="" />
         </div>
-        <div className="home">
-          <h2 id="team-home">{teamHome}</h2>
-          <div className="icon-home">
-            <img id="icon-home" src={iconHome} alt="" />
-          </div>
-          <h2 id="score-home">{scoreHome}</h2>
-        </div>
-        <div className="away">
-          <h2 id="team-away">{teamAway}</h2>
-          <div className="icon-away">
-            <img id="icon-away" src={iconAway} alt="" />
-          </div>
-          <h2 id="score-away">{scoreAway}</h2>
-        </div>
+        {/*<ResultTemplate*/}
+        <QuoteTemplate />
       </div>
 
       {updated ? (
         <div className="EditDisplayButtons">
           <ButtonGroup id="buttongroup" variant="contained" color="secondary">
             <Button onClick={handleSaveAsImage}>Save</Button>
-            <Button>Share</Button>
             <Button onClick={handleDelete}>Delete</Button>
           </ButtonGroup>
         </div>
@@ -101,17 +77,7 @@ const mapStateToProps = (state) => {
   return {
     bgData: state.backgroundImageData,
     templateData: state.templateData,
-    teamHome: state.teamHome,
-    teamAway: state.teamAway,
-    scoreHome: state.scoreHome,
-    scoreAway: state.scoreAway,
-    iconHome: state.iconHome,
-    iconAway: state.iconAway,
     updated: state.updated,
-    fileUrl: state.fileUrl,
-    initialState: state.initialState,
-    league: state.league,
-    matchday: state.matchday,
   };
 };
 

@@ -6,9 +6,9 @@ import EditDisplay from "../EditDisplay/EditDisplay";
 
 function Background() {
   return (
-    <div className="DesignsLayout">
+    <div className="designs-layout">
       <EditDisplay />
-      <div className="UploadSection">
+      <div className="upload-section">
         <UploadImage />
         <ImageGenerator />
       </div>

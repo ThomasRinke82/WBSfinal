@@ -36,16 +36,12 @@ const Profile = () => {
           <h1>Thomas</h1>
           <h2>Nietlebener SV</h2>
 
-          <ButtonGroup
-            size="small"
-            className="button-wrap"
-            variant="contained"
-            color="primary"
-          >
+          <ButtonGroup size="small" variant="contained" color="primary">
             <Button>Soccer</Button>
             <Button>Hockey</Button>
             <Button>Biathlon</Button>
           </ButtonGroup>
+
           <div className="text-wrap">
             <h3>About me</h3>
             <p>

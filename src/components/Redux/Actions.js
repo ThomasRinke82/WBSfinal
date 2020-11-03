@@ -6,7 +6,10 @@ import {
   SET_CLUBICON,
   SET_LEAGUE,
   SET_MATCHDAY,
+  SET_LOCATION,
   SET_DELETE,
+  SET_PERSONNAME,
+  SET_QUOTE,
 } from "./ActionsTypes";
 
 export const setBackgroundImg = (imgData) => {
@@ -58,8 +61,29 @@ export const setMatchday = (textValue, inputName) => {
   };
 };
 
+export const setLocation = (textValue, inputName) => {
+  return {
+    type: SET_LOCATION,
+    payload: { textValue, inputName },
+  };
+};
+
 export const setDelete = () => {
   return {
     type: SET_DELETE,
+  };
+};
+
+export const setPersonName = (personName) => {
+  return {
+    type: SET_PERSONNAME,
+    personName: personName,
+  };
+};
+
+export const setQuote = (quote) => {
+  return {
+    type: SET_QUOTE,
+    quote: quote,
   };
 };

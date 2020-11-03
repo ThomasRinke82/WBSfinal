@@ -1,18 +1,32 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import {
-  EmailShareButton,
   FacebookShareButton,
   TwitterShareButton,
   WhatsappShareButton,
-  EmailIcon,
   FacebookIcon,
   TwitterIcon,
   WhatsappIcon,
 } from "react-share";
+
+import { projectFirestore, projectStorage } from "../Firebase/config";
+
 import "./ImageCard.css";
 
-const ImageCard = ({ imageUrl }) => {
+const ImageCard = ({ imageUrl, docId }) => {
+  const handleDelete = () => {
+    projectFirestore
+      .collection("images")
+      .doc(docId)
+      .delete()
+      .then(() => {
+        console.log("Document successfully deleted!");
+      })
+      .catch((error) => {
+        console.error("Error removing document: ", error);
+      });
+  };
+
   return (
     <div className="card">
       <img alt="design" src={imageUrl} />
@@ -40,9 +54,8 @@ const ImageCard = ({ imageUrl }) => {
         >
           <WhatsappIcon className="icon" size={42} />
         </WhatsappShareButton>
-
-        <Button>Edit</Button>
-        <Button>Delete</Button>
+        <Button>Download</Button>
+        <Button onClick={handleDelete}>Delete</Button>
       </div>
     </div>
   );
