@@ -1,9 +1,0 @@
-.Home {
-  background-color: purple;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 600px;
-}

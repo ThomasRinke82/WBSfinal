@@ -9,7 +9,7 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-import { projectFirestore, projectStorage } from "../Firebase/config";
+import { projectFirestore } from "../Firebase/config";
 
 import "./ImageCard.css";
 

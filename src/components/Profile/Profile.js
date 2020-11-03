@@ -13,8 +13,8 @@ const Profile = () => {
           <Button variant="contained" color="secondary">
             Contact me
           </Button>
-          <Button variant="contained" color="secondary">
-            Designs made: 4
+          <Button variant="contained" color="secondary" href="/user_selection">
+            My designs
           </Button>
         </div>
         <div>
@@ -36,7 +36,8 @@ const Profile = () => {
           <h1>Thomas</h1>
           <h2>Nietlebener SV</h2>
 
-          <ButtonGroup size="small" variant="contained" color="primary">
+          <ButtonGroup size="small" variant="contained" color="secondary">
+            <Button disabled>My sports:</Button>
             <Button>Soccer</Button>
             <Button>Hockey</Button>
             <Button>Biathlon</Button>

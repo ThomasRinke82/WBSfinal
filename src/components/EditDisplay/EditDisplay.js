@@ -7,7 +7,6 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { v4 as uuidv4 } from "uuid";
 import { setDelete } from "../Redux/Actions";
 import ResultTemplate from "../TemplateComponents/ResultTemplate";
-import QuoteTemplate from "../TemplateComponents/QuoteTemplate";
 
 import {
   projectStorage,
@@ -34,7 +33,6 @@ const EditDisplay = ({ bgData, templateData, updated, dispatch }) => {
                 url: value,
               })
               .then((docref) => console.log("all good"))
-              .orderBy("createdAt", "desc")
               .catch((e) => console.error(e));
           });
         });
@@ -57,8 +55,7 @@ const EditDisplay = ({ bgData, templateData, updated, dispatch }) => {
         <div className="templateData">
           <img id="templateData" src={templateData} alt="" />
         </div>
-        {/*<ResultTemplate*/}
-        <QuoteTemplate />
+        <ResultTemplate />
       </div>
 
       {updated ? (

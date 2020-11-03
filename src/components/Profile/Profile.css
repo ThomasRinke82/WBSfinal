@@ -1,4 +1,4 @@
-h1,
+.content-wrap h1,
 h2,
 h3 {
   color: grey;
@@ -52,6 +52,7 @@ h2 {
 
 .text-wrap p {
   text-align: left;
+  font-size: 0.9rem;
 }
 
 #profile-image {

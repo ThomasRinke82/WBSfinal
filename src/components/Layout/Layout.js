@@ -8,7 +8,7 @@ function Layout() {
     <div className="BackgroundDesign">
       <EditDisplay />
       <TemplateGrid />
-      <div className="TemplateCollection">
+      <div className="template-collection">
         <h4>Choose your Template</h4>
         <select name="templates" id="templates">
           <option value="" disabled selected>

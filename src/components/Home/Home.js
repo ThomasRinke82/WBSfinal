@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
   button: {
     marginTop: theme.spacing(1),
     marginRight: theme.spacing(1),
+    backgroundColor: "#0c343f",
+    color: "#5effac",
   },
   actionsContainer: {
     marginBottom: theme.spacing(2),
@@ -28,8 +30,9 @@ const useStyles = makeStyles((theme) => ({
 
 function getSteps() {
   return [
-    "Choose a background and a template.",
-    "Input your information.",
+    "A social media presence is essential nowadays.",
+    "Spoyou provides you with great images and templates.",
+    "Customize your designs in seconds.",
     "Save and share the final design.",
   ];
 }
@@ -37,10 +40,12 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return "Spoyou helps you to create awesome content for your social media channels.";
+      return "Create awesome content with just a few button clicks.";
     case 1:
-      return "Here you customize the design with the informations you want to display and share.";
+      return "Upload your files or take one from our huge database.";
     case 2:
+      return "Just insert the information you want to display and share. Spoyou does the rest.";
+    case 3:
       return "Finally, you can save your result on your selection for later usage or share it directly to your social media channels.";
     default:
       return "Unknown stepIndex";
@@ -66,6 +71,8 @@ function Home() {
 
   return (
     <div className={classes.root}>
+      <h1>Welcome to Spoyou!</h1>
+      <h2>Create awesome designs for your social media channels.</h2>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
           <Step key={label}>
