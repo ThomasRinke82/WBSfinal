@@ -45,3 +45,7 @@ export const SET_PERSONNAME = {
 export const SET_QUOTE = {
   type: "SET_QUOTE",
 };
+
+export const SET_ACTIVETEMPLATE = {
+  type: "SET_ACTIVETEMPLATE",
+};

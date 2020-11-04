@@ -33,7 +33,11 @@ const ChooseClubIcon = ({ dispatch, name }) => {
           </MenuItem>
 
           {docs
-            ? docs.map((doc) => <MenuItem value={doc.url}>{doc.name}</MenuItem>)
+            ? docs.map((doc) => (
+                <MenuItem label={doc.name} value={doc.url}>
+                  {doc.name}
+                </MenuItem>
+              ))
             : null}
         </Select>
       </FormControl>

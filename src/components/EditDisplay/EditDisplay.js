@@ -7,6 +7,7 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { v4 as uuidv4 } from "uuid";
 import { setDelete } from "../Redux/Actions";
 import ResultTemplate from "../TemplateComponents/ResultTemplate";
+import QuoteTemplate from "../TemplateComponents/QuoteTemplate";
 
 import {
   projectStorage,
@@ -16,7 +17,13 @@ import {
 
 import "./EditDisplay.css";
 
-const EditDisplay = ({ bgData, templateData, updated, dispatch }) => {
+const EditDisplay = ({
+  bgData,
+  templateData,
+  updated,
+  dispatch,
+  activeTemplate,
+}) => {
   let imageContainerRef = useRef(null);
 
   const handleSaveAsImage = async () => {
@@ -55,7 +62,9 @@ const EditDisplay = ({ bgData, templateData, updated, dispatch }) => {
         <div className="templateData">
           <img id="templateData" src={templateData} alt="" />
         </div>
-        <ResultTemplate />
+
+        {activeTemplate === "result" ? <ResultTemplate /> : null}
+        {activeTemplate === "quote" ? <QuoteTemplate /> : null}
       </div>
 
       {updated ? (
@@ -75,6 +84,7 @@ const mapStateToProps = (state) => {
     bgData: state.backgroundImageData,
     templateData: state.templateData,
     updated: state.updated,
+    activeTemplate: state.activeTemplate,
   };
 };
 

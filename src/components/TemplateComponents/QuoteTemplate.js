@@ -5,16 +5,15 @@ import "./QuoteTemplate.css";
 
 const QuoteTemplate = ({ teamHome, iconHome, quote, personName }) => {
   return (
-    <div className="template-component-wrap">
-      <div className="team-wrap">
-        <h2 id="team-home">{teamHome}</h2>
-        <div className="icon-home">
-          <img id="icon-home" src={iconHome} alt="" />
-        </div>
+    <div className="quote-component-wrap">
+      <div className="quote-team-wrap">
+        <img id="quote-team-icon" src={iconHome} alt="" />
+        <h1 id="quote-team-name">{teamHome}</h1>
       </div>
-
-      <div className="quote-text">{quote}</div>
-      <div className="person">{personName}</div>
+      <div className="text-wrap">
+        <div className="quote-text">{quote}</div>
+        <div className="quote-person">{personName}</div>
+      </div>
     </div>
   );
 };
@@ -22,13 +21,7 @@ const QuoteTemplate = ({ teamHome, iconHome, quote, personName }) => {
 const mapStateToProps = (state) => {
   return {
     teamHome: state.teamHome,
-    teamAway: state.teamAway,
-    scoreHome: state.scoreHome,
-    scoreAway: state.scoreAway,
     iconHome: state.iconHome,
-    iconAway: state.iconAway,
-    league: state.league,
-    matchday: state.matchday,
     personName: state.personName,
     quote: state.quote,
   };

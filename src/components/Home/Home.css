@@ -1,0 +1,11 @@
+.img-container {
+  position: relative;
+}
+
+#img-home {
+  max-width: 400px;
+}
+
+#home-h1 {
+  color: #0c343f;
+}

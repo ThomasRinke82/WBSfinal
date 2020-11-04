@@ -1,6 +1,20 @@
 .forms {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.select-form {
+  background-color: #5effac;
+  height: 100px;
+  width: 30%;
+}
+
+.content-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

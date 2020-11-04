@@ -4,7 +4,7 @@ import "./ImageGrid.css";
 import ImageCard from "../ImageCard/ImageCard";
 
 const ImageGrid = () => {
-  const { docs } = useFirestore("images");
+  const { docs } = useFirestore("images", true);
   return (
     // if there are image files, map through them and display them
     <div className="img-grid">

@@ -10,6 +10,7 @@ import {
   SET_DELETE,
   SET_PERSONNAME,
   SET_QUOTE,
+  SET_ACTIVETEMPLATE,
 } from "./ActionsTypes";
 
 export const setBackgroundImg = (imgData) => {
@@ -85,5 +86,12 @@ export const setQuote = (quote) => {
   return {
     type: SET_QUOTE,
     quote: quote,
+  };
+};
+
+export const setActiveTemplate = (activeTemplate) => {
+  return {
+    type: SET_ACTIVETEMPLATE,
+    activeTemplate: activeTemplate,
   };
 };

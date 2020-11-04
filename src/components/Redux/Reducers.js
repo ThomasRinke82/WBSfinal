@@ -10,6 +10,7 @@ import {
   SET_DELETE,
   SET_PERSONNAME,
   SET_QUOTE,
+  SET_ACTIVETEMPLATE,
 } from "./ActionsTypes";
 
 const initialState = {
@@ -27,6 +28,7 @@ const initialState = {
   location: "",
   personName: "",
   quote: "",
+  activeTemplate: "",
 };
 
 export default function StateUpdater(state = initialState, action) {
@@ -103,6 +105,9 @@ export default function StateUpdater(state = initialState, action) {
 
     case SET_QUOTE:
       return { ...state, updated: true, quote: action.quote };
+
+    case SET_ACTIVETEMPLATE:
+      return { ...state, updated: true, activeTemplate: action.activeTemplate };
 
     default:
       return state;

@@ -1,16 +1,22 @@
 import React from "react";
-import "./ContentForm.css";
+import "./ContentFormResult.css";
 import {
+  setTeamName,
+  setScore,
   setLeague,
   setMatchday,
   setLocation,
-  setQuote,
-  setPersonName,
 } from "../Redux/Actions";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
+import ChooseClubIcon from "../ChooseClubIcon/ChooseClubIcon";
 
-const ContentFormLeague = ({ dispatch }) => {
+const ContentFormResult = ({ dispatch, activeTemplate }) => {
+  const changeHandler = (e) => {
+    dispatch(setTeamName(e.target.value, e.target.name));
+    dispatch(setScore(e.target.value, e.target.name));
+  };
+
   const changeLeague = (e) => {
     dispatch(setLeague(e.target.value, e.target.name));
   };
@@ -23,17 +29,9 @@ const ContentFormLeague = ({ dispatch }) => {
     dispatch(setLocation(e.target.value, e.target.name));
   };
 
-  const changeQuote = (e) => {
-    dispatch(setQuote(e.target.value, e.target.name));
-  };
-
-  const changeName = (e) => {
-    dispatch(setPersonName(e.target.value, e.target.name));
-  };
-
   return (
-    <div className="contentform-league">
-      <form>
+    <div className="contentform-result">
+      <div className="result-league-info">
         <div>
           <TextField
             variant="outlined"
@@ -65,31 +63,50 @@ const ContentFormLeague = ({ dispatch }) => {
             onChange={changeLocation}
           />
         </div>
-
-        <div>
+      </div>
+      <div className="result-team-info">
+        <div className="result-home">
+          <ChooseClubIcon name={"icon-home"} />
           <TextField
             variant="outlined"
-            label="Quote"
+            label="TeamHome"
             size="small"
             color="primary"
-            name="quote"
-            onChange={changeQuote}
+            name="team-home"
+            onChange={changeHandler}
+          />
+          <TextField
+            variant="outlined"
+            placeholder="Score"
+            size="small"
+            color="primary"
+            name="score-home"
+            onChange={changeHandler}
           />
         </div>
 
-        <div>
+        <div className="result-away">
+          <ChooseClubIcon name={"icon-away"} />
           <TextField
             variant="outlined"
-            label="Name"
+            label="TeamAway"
             size="small"
             color="primary"
-            name="name"
-            onChange={changeName}
+            name="team-away"
+            onChange={changeHandler}
+          />
+          <TextField
+            variant="outlined"
+            placeholder="Score"
+            size="small"
+            color="primary"
+            name="score-away"
+            onChange={changeHandler}
           />
         </div>
-      </form>
+      </div>
     </div>
   );
 };
 
-export default connect()(ContentFormLeague);
+export default connect()(ContentFormResult);

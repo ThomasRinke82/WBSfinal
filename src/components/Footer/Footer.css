@@ -1,3 +1,17 @@
+.placeholder {
+  height: 60px;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
 .footer {
   background-color: #0c343f;
   color: white;
@@ -6,6 +20,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width: 1080px;
 }
 
 #footer-logo {

@@ -1,25 +1,52 @@
-.template-component-wrap {
+.quote-component-wrap {
   position: relative;
   height: 1080px;
   width: 1080px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: ;
 }
 
-.team-wrap {
+.quote-team-wrap {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text-wrap {
 }
 
 .quote-text {
-  position: absolute;
-  margin-top: 15rem;
-  font-size: 5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  font-size: 4rem;
   color: white;
+  text-align: right;
+  font-weight: bold;
 }
 
-.person {
-  position: absolute;
-  margin-top: 20rem;
-  font-size: 5rem;
+.quote-person {
+  text-align: right;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  color: white;
+  font-style: italic;
+}
+
+#quote-team-icon {
+  height: 200px;
+  width: auto;
+}
+
+#quote-team-name {
+  margin: 0;
+  margin-left: 2rem;
+  font-size: 7rem;
   color: white;
 }

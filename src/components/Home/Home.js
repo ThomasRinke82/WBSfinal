@@ -71,8 +71,15 @@ const Home = () => {
 
   return (
     <div className={classes.root}>
-      <h1>Welcome to Spoyou!</h1>
+      <h1 id="home-h1">Welcome to Spoyou!</h1>
       <h2>Create awesome designs for your social media channels.</h2>
+      <div className="img-container">
+        <img
+          id="img-home"
+          src="https://firebasestorage.googleapis.com/v0/b/final-project-wbs.appspot.com/o/assets%2FSocial%20networking-amico.png?alt=media&token=c296cd72-9e33-43c0-a50f-9a0fb575f8c1"
+          href="https://stories.freepik.com/web"
+        />
+      </div>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
           <Step key={label}>

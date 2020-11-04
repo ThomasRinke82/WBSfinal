@@ -1,0 +1,22 @@
+.contentform-quote {
+  background-color: #5effac;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentform-team-wrap {
+  min-width: 300px;
+}
+
+.contentform-content-wrap {
+  min-width: 300px;
+}
+
+.content-field {
+  margin: 10px;
+}
