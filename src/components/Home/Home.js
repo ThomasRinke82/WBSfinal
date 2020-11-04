@@ -17,14 +17,23 @@ const useStyles = makeStyles((theme) => ({
   button: {
     marginTop: theme.spacing(1),
     marginRight: theme.spacing(1),
-    backgroundColor: "#0c343f",
-    color: "#5effac",
+    backgroundColor: "#5effac",
+    color: "#0c343f",
+
+    "&:hover": {
+      backgroundColor: "#0c343f",
+      color: "#5effac",
+    },
   },
   actionsContainer: {
     marginBottom: theme.spacing(2),
   },
   resetContainer: {
     padding: theme.spacing(3),
+  },
+  MuiStepIconActive: {
+    backgroundColor: "#5effac",
+    color: "#0c343f",
   },
 }));
 
