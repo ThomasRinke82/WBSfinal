@@ -52,7 +52,7 @@ function getStepContent(step) {
   }
 }
 
-function Home() {
+const Home = () => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
@@ -85,6 +85,8 @@ function Home() {
                     disabled={activeStep === 0}
                     onClick={handleBack}
                     className={classes.button}
+                    variant="contained"
+                    color="primary"
                   >
                     Back
                   </Button>
@@ -112,6 +114,6 @@ function Home() {
       )}
     </div>
   );
-}
+};
 
 export default Home;

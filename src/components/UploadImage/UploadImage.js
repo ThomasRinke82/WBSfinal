@@ -8,13 +8,12 @@ import Button from "@material-ui/core/Button";
 import "./UploadImage.css";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
   input: {
     display: "none",
+  },
+  button: {
+    backgroundColor: "#0c343f",
+    color: "#5effac",
   },
 }));
 
@@ -37,16 +36,15 @@ const UploadImage = ({ dispatch }) => {
           onChange={handleChange}
         />
         <label htmlFor="contained-button-file">
-          <Button variant="contained" color="secondary" component="span">
+          <Button
+            className={classes.button}
+            variant="contained"
+            color="primary"
+            component="span"
+          >
             Upload your image
           </Button>
         </label>
-        <input
-          accept="image/*"
-          className={classes.input}
-          id="icon-button-file"
-          type="file"
-        />
       </div>
     </div>
   );

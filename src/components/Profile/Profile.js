@@ -1,19 +1,39 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import "./Profile.css";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: "100%",
+  },
+  button: {
+    backgroundColor: "#0c343f",
+    color: "#5effac",
+  },
+}));
+
 const Profile = () => {
+  const classes = useStyles();
   return (
     <div className="profile">
       <div className="background-image"></div>
 
       <div className="profile-card">
         <div className="buttons-top">
-          <Button variant="contained" color="secondary">
+          <Button
+            className={classes.button}
+            variant="contained"
+            color="primary"
+          >
             Contact me
           </Button>
-          <Button variant="contained" color="secondary" href="/user_selection">
+          <Button
+            className={classes.button}
+            variant="contained"
+            color="primary"
+          >
             My designs
           </Button>
         </div>
@@ -36,11 +56,17 @@ const Profile = () => {
           <h1>Thomas</h1>
           <h2>Nietlebener SV</h2>
 
-          <ButtonGroup size="small" variant="contained" color="secondary">
+          <ButtonGroup size="small" variant="contained" color="default">
             <Button disabled>My sports:</Button>
-            <Button>Soccer</Button>
-            <Button>Hockey</Button>
-            <Button>Biathlon</Button>
+            <Button className={classes.button} color="primary">
+              Soccer
+            </Button>
+            <Button className={classes.button} color="primary">
+              Hockey
+            </Button>
+            <Button className={classes.button} color="primary">
+              Biathlon
+            </Button>
           </ButtonGroup>
 
           <div className="text-wrap">
