@@ -1,10 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { setBackgroundImg } from "../Redux/Actions";
-import "./ImageGenerator.css";
 import axios from "axios";
 
+import FormControl from "@material-ui/core/FormControl";
+import { makeStyles } from "@material-ui/core/styles";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+
+import "./ImageGenerator.css";
+
+const useStyles = makeStyles((theme) => ({
+  select: {
+    backgroundColor: "#5effac",
+    color: "#0c343f",
+    width: "300px",
+  },
+
+  buttongroup: {
+    marginTop: "20px",
+  },
+}));
+
 const ImageGenerator = ({ dispatch }) => {
+  const classes = useStyles();
   const [images, setImages] = useState();
 
   // fetch the unsplash API
@@ -28,16 +48,40 @@ const ImageGenerator = ({ dispatch }) => {
 
   return (
     <div className="imageSelection">
-      <h3>Choose your sport.</h3>
+      <FormControl className={classes.buttongroup} variant="outlined">
+        <InputLabel id="demo-simple-select-required-label">
+          Choose your sport
+        </InputLabel>
+        <Select
+          className={classes.select}
+          name="selectSport"
+          id="selectSport"
+          value=""
+          onChange={selectSports}
+        >
+          <MenuItem value="" disabled selected>
+            <em>Choose your sport.</em>
+          </MenuItem>
+          <MenuItem value="soccer" name="soccer">
+            Soccer
+          </MenuItem>
+          <MenuItem value="basketball" name="basketball">
+            Basketball
+          </MenuItem>
+          <MenuItem value="tennis" name="tennis">
+            Tennis
+          </MenuItem>
+        </Select>
+      </FormControl>
 
-      <select name="sports" id="sports" onChange={selectSports}>
+      {/*  <select name="sports" id="sports" onChange={selectSports}>
         <option value="" disabled selected>
           Sports
         </option>
         <option value="soccer">Soccer</option>
         <option value="basketball">Basketball</option>
         <option value="tennis">Tennis</option>
-      </select>
+      </select> */}
 
       <div className="ImageGenerator">
         {images

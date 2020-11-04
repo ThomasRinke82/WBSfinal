@@ -14,12 +14,10 @@ const useStyles = makeStyles((theme) => ({
   select: {
     backgroundColor: "#5effac",
     color: "#0c343f",
-    width: "200px",
-    marginTop: "",
+    width: "300px",
   },
-  whateverIWant: {
+  buttongroup: {
     marginTop: "20px",
-    color: "#0c343f",
   },
 }));
 
@@ -31,9 +29,9 @@ const SelectTemplates = ({ dispatch }) => {
 
   return (
     <div>
-      <FormControl className={classes.whateverIWant} variant="outlined">
+      <FormControl className={classes.buttongroup} variant="outlined">
         <InputLabel id="demo-simple-select-required-label">
-          What do you want?
+          What do you want to create?
         </InputLabel>
         <Select
           className={classes.select}
@@ -43,7 +41,7 @@ const SelectTemplates = ({ dispatch }) => {
           onChange={handleActiveTemplate}
         >
           <MenuItem value="">
-            <em>Template</em>
+            <em>Choose your template</em>
           </MenuItem>
           <MenuItem value="result" name="result">
             Result Image

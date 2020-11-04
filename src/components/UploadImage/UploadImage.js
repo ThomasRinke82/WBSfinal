@@ -12,8 +12,12 @@ const useStyles = makeStyles((theme) => ({
     display: "none",
   },
   button: {
-    backgroundColor: "#0c343f",
-    color: "#5effac",
+    color: "#0c343f",
+    backgroundColor: "#5effac",
+    "&:hover": {
+      backgroundColor: "#0c343f",
+      color: "#5effac",
+    },
   },
 }));
 

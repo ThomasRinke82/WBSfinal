@@ -9,8 +9,12 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   button: {
-    backgroundColor: "#0c343f",
-    color: "#5effac",
+    color: "#0c343f",
+    backgroundColor: "#5effac",
+    "&:hover": {
+      backgroundColor: "#0c343f",
+      color: "#5effac",
+    },
   },
 }));
 
