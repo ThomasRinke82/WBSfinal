@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 
-function Header() {
+const Header = () => {
   return (
     <div className="Header">
       <a href="/">
@@ -20,6 +20,6 @@ function Header() {
       </a>
     </div>
   );
-}
+};
 
 export default Header;

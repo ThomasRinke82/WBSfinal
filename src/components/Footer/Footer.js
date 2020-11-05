@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 
-function Footer() {
+const Footer = () => {
   return (
     <div className="placeholder">
       <div className="footer-wrap">
@@ -15,6 +15,6 @@ function Footer() {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

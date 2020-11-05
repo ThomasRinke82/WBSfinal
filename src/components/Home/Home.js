@@ -37,16 +37,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function getSteps() {
+const getSteps = () => {
   return [
     "A social media presence is essential nowadays.",
     "Spoyou provides you with great images and templates.",
     "Customize your designs in seconds.",
     "Save and share the final design.",
   ];
-}
+};
 
-function getStepContent(step) {
+const getStepContent = (step) => {
   switch (step) {
     case 0:
       return "Create awesome content with just a few button clicks.";
@@ -59,7 +59,7 @@ function getStepContent(step) {
     default:
       return "Unknown stepIndex";
   }
-}
+};
 
 const Home = () => {
   const classes = useStyles();
