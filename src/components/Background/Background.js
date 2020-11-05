@@ -4,7 +4,7 @@ import ImageGenerator from "../ImageGenerator/ImageGenerator";
 import UploadImage from "../UploadImage/UploadImage";
 import EditDisplay from "../EditDisplay/EditDisplay";
 
-function Background() {
+const Background = () => {
   return (
     <div className="designs-layout">
       <EditDisplay />
@@ -14,6 +14,6 @@ function Background() {
       </div>
     </div>
   );
-}
+};
 
 export default Background;

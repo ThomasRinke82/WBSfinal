@@ -1,16 +1,11 @@
 import React from "react";
-import "./Content.css";
 import { connect } from "react-redux";
-import { setActiveTemplate } from "../Redux/Actions";
 import EditDisplay from "../EditDisplay/EditDisplay";
 import ContentFormResult from "../ContentForm/ContentFormResult";
 import ContentFormQuote from "../ContentForm/ContentFormQuote";
 import SelectTemplate from "../SelectTemplate/SelectTemplate";
 
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
+import "./Content.css";
 
 const Content = ({ dispatch, activeTemplate }) => {
   return (

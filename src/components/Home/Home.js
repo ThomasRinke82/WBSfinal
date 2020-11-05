@@ -87,6 +87,7 @@ const Home = () => {
           id="img-home"
           src="https://firebasestorage.googleapis.com/v0/b/final-project-wbs.appspot.com/o/assets%2FSocial%20networking-amico.png?alt=media&token=c296cd72-9e33-43c0-a50f-9a0fb575f8c1"
           href="https://stories.freepik.com/web"
+          alt="social media generation"
         />
       </div>
       <Stepper activeStep={activeStep} orientation="vertical">

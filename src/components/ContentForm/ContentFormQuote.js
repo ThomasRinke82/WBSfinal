@@ -3,7 +3,6 @@ import "./ContentFormQuote.css";
 import { setTeamName, setQuote, setPersonName } from "../Redux/Actions";
 import { connect } from "react-redux";
 
-import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import ChooseClubIcon from "../ChooseClubIcon/ChooseClubIcon";
 
