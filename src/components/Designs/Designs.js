@@ -1,12 +1,13 @@
 import React from "react";
-import "./Designs.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Content from "../Content/Content";
 import Background from "../Background/Background";
 import Layout from "../Layout/Layout";
 
-function Designs() {
+import "./Designs.css";
+
+const Designs = () => {
   return (
     <div>
       <Router>
@@ -38,6 +39,6 @@ function Designs() {
       </Router>
     </div>
   );
-}
+};
 
 export default Designs;
